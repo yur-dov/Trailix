@@ -1,0 +1,36 @@
+.header {
+  display: flex;
+  padding: 16px;
+  background-color: #111;
+  color: white;
+}
+.logo {
+  color: rgb(240, 223, 197);
+  font-size: 22px;
+  font-style: normal;
+  font-family: sans-serif;
+}
+.logo span {
+  font-weight: 900;
+  color: #00bfff;
+  font-size: 22px;
+}
+.navList {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.navList a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+}
+
+.navList a:hover {
+  text-decoration: underline;
+}
+
+.active {
+  border-bottom: 2px solid #00bfff;
+}
