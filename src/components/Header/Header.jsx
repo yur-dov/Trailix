@@ -1,4 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
+import { TiThMenu } from "react-icons/ti";
 
 import s from "./Header.module.css";
 
@@ -10,6 +11,7 @@ export default function Header() {
       <p className={s.logo}>
         Trail<span>ix</span>
       </p>
+      <TiThMenu className={s.menuIcon} />
       <nav>
         <ul className={s.navList}>
           <li>

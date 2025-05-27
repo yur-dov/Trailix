@@ -1,5 +1,7 @@
 .header {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
   padding: 16px;
   background-color: #111;
   color: white;
@@ -14,6 +16,14 @@
   font-weight: 900;
   color: #00bfff;
   font-size: 22px;
+}
+.menuIcon {
+  width: 24px;
+  height: 24px;
+}
+.menuIcon:hover {
+  cursor: pointer;
+  transform: scale(1.1);
 }
 .navList {
   display: flex;
