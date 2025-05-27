@@ -1,0 +1,51 @@
+/* 1. Сброс отступов и box-sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* 2. Базовые стили для body */
+body {
+  font-family: "Ubuntu", sans-serif;
+  background-color: #0d0d0d;
+  color: #ffffff;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 3. Удаление стилей списков */
+ul,
+ol {
+  list-style: none;
+}
+
+/* 4. Удаление стилей ссылок */
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+/* 5. Удаление обводки у кнопок и input */
+button,
+input,
+textarea,
+select {
+  font: inherit;
+  border: none;
+  outline: none;
+  background: none;
+}
+button {
+  cursor: pointer;
+}
+
+/* 6. Удаление стилей для изображений */
+img {
+  max-width: 100%;
+  display: block;
+}
