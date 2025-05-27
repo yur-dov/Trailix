@@ -1,4 +1,5 @@
 import { Routes, Route } from "react-router-dom";
+import "./App.css";
 
 import SharedLayout from "./components/SharedLayout";
 import Library from "./components/Library/Library";
