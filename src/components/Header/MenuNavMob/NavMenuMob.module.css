@@ -1,0 +1,40 @@
+.navigate {
+  width: 380px;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #000000;
+}
+.navigateList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.navigateItem {
+  /* display: block; */
+}
+.navigateBtn {
+  width: 56px;
+  height: 48px;
+  color: white;
+  padding: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  border-radius: 7px;
+  border: 1px solid rgba(40, 40, 40, 1);
+}
+.btnIcon {
+  width: 24px;
+  height: 24px;
+}
+.btnText {
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0;
+  padding: 0;
+  color: rgba(131, 129, 153, 1);
+}

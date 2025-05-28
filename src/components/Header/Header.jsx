@@ -1,18 +1,25 @@
 import { Link, useLocation } from "react-router-dom";
-import { TiThMenu } from "react-icons/ti";
+import { useMediaQuery } from "react-responsive";
+import NavMenuMob from "./MenuNavMob/NavMenuMob";
+import { GiHamburgerMenu } from "react-icons/gi";
 
 import s from "./Header.module.css";
 
 export default function Header() {
   const { pathname } = useLocation();
+  const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
 
   return (
     <header className={s.header}>
       <p className={s.logo}>
-        Trail<span>ix</span>
+        TRAIL<span>IX</span>
       </p>
-      <TiThMenu className={s.menuIcon} />
-      <nav>
+
+      <button className={s.menuBtn}>
+        <GiHamburgerMenu className={s.menuBtnIcon} />
+      </button>
+
+      <nav className={s.navWrapper}>
         <ul className={s.navList}>
           <li>
             <Link to="/" className={pathname === "/" ? s.active : ""}>
@@ -37,6 +44,8 @@ export default function Header() {
           </li>
         </ul>
       </nav>
+
+      {isMobile && <NavMenuMob />}
     </header>
   );
 }

@@ -8,23 +8,34 @@
 }
 .logo {
   color: rgb(240, 223, 197);
-  font-size: 22px;
+  font-size: 30px;
   font-style: normal;
   font-family: sans-serif;
 }
 .logo span {
   font-weight: 900;
   color: #00bfff;
-  font-size: 22px;
 }
-.menuIcon {
-  width: 24px;
-  height: 24px;
+.menuBtn {
+  width: 32px;
+  height: 32px;
+  color: white;
 }
-.menuIcon:hover {
+.menuBtnIcon {
+  width: 30px;
+  height: 30px;
+}
+.menuBtnIcon:hover {
   cursor: pointer;
   transform: scale(1.1);
 }
+.navWrapper {
+  width: 100%;
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
 .navList {
   display: flex;
   gap: 20px;
