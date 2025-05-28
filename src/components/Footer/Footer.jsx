@@ -58,8 +58,9 @@ function Footer() {
             </button>
           </li>
         </ul>
-
-        <p className={s.copyright}>Copyright@ 2025. All rights reserved.</p>
+        <div className={s.copyrightContainer}>
+          <p className={s.copyright}>Copyright@ 2025. All rights reserved.</p>
+        </div>
       </div>
     </Container>
   );
