@@ -1,5 +1,9 @@
 import { Link, useLocation } from "react-router-dom";
-import { TiThMenu } from "react-icons/ti";
+import { FaHome, FaFilm } from "react-icons/fa";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { MdOutlineVideoLibrary } from "react-icons/md";
+import { RiPlayList2Fill } from "react-icons/ri";
+import { BsFillCameraReelsFill } from "react-icons/bs";
 
 import s from "./Header.module.css";
 
@@ -9,10 +13,14 @@ export default function Header() {
   return (
     <header className={s.header}>
       <p className={s.logo}>
-        Trail<span>ix</span>
+        TRAIL<span>IX</span>
       </p>
-      <TiThMenu className={s.menuIcon} />
-      <nav>
+
+      <button className={s.menuBtn}>
+        <GiHamburgerMenu className={s.menuBtnIcon} />
+      </button>
+
+      <nav className={s.navWrapper}>
         <ul className={s.navList}>
           <li>
             <Link to="/" className={pathname === "/" ? s.active : ""}>
@@ -37,6 +45,44 @@ export default function Header() {
           </li>
         </ul>
       </nav>
+      <div className={s.navigate}>
+        <ul className={s.navigateList}>
+          <li className={s.navigateItem}>
+            <button className={s.navigateBtn}>
+              <FaFilm className={s.btnIcon} />
+              <span className={s.btnText}>Trand</span>
+            </button>
+          </li>
+
+          <li className={s.navigateItem}>
+            <button className={s.navigateBtn}>
+              <BsFillCameraReelsFill className={s.btnIcon} />
+              <span className={s.btnText}>Series</span>
+            </button>
+          </li>
+
+          <li className={s.navigateItem}>
+            <button className={s.navigateBtn}>
+              <FaHome className={s.btnIcon} />
+              <span className={s.btnText}>Home</span>
+            </button>
+          </li>
+
+          <li className={s.navigateItem}>
+            <button className={s.navigateBtn}>
+              <RiPlayList2Fill className={s.btnIcon} />
+              <span className={s.btnText}>Genres</span>
+            </button>
+          </li>
+
+          <li className={s.navigateItem}>
+            <button className={s.navigateBtn}>
+              <MdOutlineVideoLibrary className={s.btnIcon} />
+              <span className={s.btnText}>Library</span>
+            </button>
+          </li>
+        </ul>
+      </div>
     </header>
   );
 }
