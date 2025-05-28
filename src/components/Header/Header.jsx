@@ -1,14 +1,13 @@
 import { Link, useLocation } from "react-router-dom";
-import { FaHome, FaFilm } from "react-icons/fa";
+import { useMediaQuery } from "react-responsive";
+import NavMenuMob from "./MenuNavMob/NavMenuMob";
 import { GiHamburgerMenu } from "react-icons/gi";
-import { MdOutlineVideoLibrary } from "react-icons/md";
-import { RiPlayList2Fill } from "react-icons/ri";
-import { BsFillCameraReelsFill } from "react-icons/bs";
 
 import s from "./Header.module.css";
 
 export default function Header() {
   const { pathname } = useLocation();
+  const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
 
   return (
     <header className={s.header}>
@@ -45,44 +44,8 @@ export default function Header() {
           </li>
         </ul>
       </nav>
-      <div className={s.navigate}>
-        <ul className={s.navigateList}>
-          <li className={s.navigateItem}>
-            <button className={s.navigateBtn}>
-              <FaFilm className={s.btnIcon} />
-              <span className={s.btnText}>Trand</span>
-            </button>
-          </li>
 
-          <li className={s.navigateItem}>
-            <button className={s.navigateBtn}>
-              <BsFillCameraReelsFill className={s.btnIcon} />
-              <span className={s.btnText}>Series</span>
-            </button>
-          </li>
-
-          <li className={s.navigateItem}>
-            <button className={s.navigateBtn}>
-              <FaHome className={s.btnIcon} />
-              <span className={s.btnText}>Home</span>
-            </button>
-          </li>
-
-          <li className={s.navigateItem}>
-            <button className={s.navigateBtn}>
-              <RiPlayList2Fill className={s.btnIcon} />
-              <span className={s.btnText}>Genres</span>
-            </button>
-          </li>
-
-          <li className={s.navigateItem}>
-            <button className={s.navigateBtn}>
-              <MdOutlineVideoLibrary className={s.btnIcon} />
-              <span className={s.btnText}>Library</span>
-            </button>
-          </li>
-        </ul>
-      </div>
+      {isMobile && <NavMenuMob />}
     </header>
   );
 }
