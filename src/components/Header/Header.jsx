@@ -1,6 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import { useMediaQuery } from "react-responsive";
 import NavMenuMob from "./MenuNavMob/NavMenuMob";
+import ModalMenu from "./MenuBurger/ModalMenu";
 import { GiHamburgerMenu } from "react-icons/gi";
 
 import s from "./Header.module.css";
@@ -8,6 +9,7 @@ import s from "./Header.module.css";
 export default function Header() {
   const { pathname } = useLocation();
   const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
+  const showModal = true;
 
   return (
     <header className={s.header}>
@@ -45,6 +47,7 @@ export default function Header() {
         </ul>
       </nav>
 
+      {showModal && <ModalMenu />}
       {isMobile && <NavMenuMob />}
     </header>
   );

@@ -1,0 +1,19 @@
+.modalContainer {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 22px;
+}
+.logo {
+  color: rgb(240, 223, 197);
+  font-size: 36px;
+  font-weight: 600;
+  font-style: normal;
+  font-family: Ubuntu;
+}
+.logo span {
+  color: #00bfff;
+}
