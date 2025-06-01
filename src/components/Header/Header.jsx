@@ -9,7 +9,8 @@ import s from "./Header.module.css";
 export default function Header() {
   const { pathname } = useLocation();
   const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
-  const showModal = true;
+  // const showModal = true;
+  const showModal = false;
 
   return (
     <header className={s.header}>

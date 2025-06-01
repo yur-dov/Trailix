@@ -12,7 +12,7 @@ function App() {
       <Route path="/" element={<SharedLayout />}>
         <Route index element={<Home />} />
         <Route path="library" element={<Library />} />
-        <Route path="favorites" element={<Favorites />} />
+        <Route path="trands" element={<Favorites />} />
       </Route>
     </Routes>
   );
