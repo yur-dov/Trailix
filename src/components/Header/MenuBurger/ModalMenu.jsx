@@ -1,41 +1,67 @@
 import s from "./ModalMenu.module.css";
+
+import { useRef, useEffect } from "react";
+import { gsap } from "gsap";
+
 import { Link } from "react-router-dom";
-import { FaRegUserCircle, FaLinkedin, FaGithub, FaPlus } from "react-icons/fa";
+import { FaRegUserCircle } from "react-icons/fa";
 import { IoClose } from "react-icons/io5";
+import { CiSearch } from "react-icons/ci";
 
-function ModalMenu() {
+function ModalMenu({ onCloseModal, showModal }) {
+  const modalRef = useRef(null);
+
+  useEffect(() => {
+    if (showModal) {
+      gsap.fromTo(
+        modalRef.current,
+        { opacity: 0, scale: 0.8, y: -50 },
+        { opacity: 1, scale: 1, y: 0, duration: 0.4, ease: "power3.out" }
+      );
+    } else {
+      gsap.to(modalRef.current, {
+        opacity: 0,
+        scale: 0.8,
+        y: -50,
+        duration: 0.3,
+        ease: "power3.in",
+      });
+    }
+  }, [showModal]);
+
   return (
-    <div className={s.modalContainer}>
-      <p className={s.logo}>
-        TRAIL<span>IX</span>
-      </p>
+    <div className={s.modalContainer} ref={modalRef}>
+      <div className={s.modalMenuHeaderWrapp}>
+        <p className={s.logo}>
+          TRAIL<span>IX</span>
+        </p>
 
-      <button>
-        <IoClose />
-      </button>
-      <form action="">
-        <button></button>
-        <input type="text" />
+        <button type="button" onClick={onCloseModal} className={s.closeBtn}>
+          <IoClose className={s.closeBtnIcon} />
+        </button>
+      </div>
+
+      <form className={s.searchForm}>
+        <button className={s.searchBtn}>
+          <CiSearch className={s.searchBtnIcon} />
+        </button>
+        <input type="text" className={s.searchInput} placeholder="Search" />
       </form>
-      <ul>
-        <li>
-          <Link>Home</Link>
+
+      <ul className={s.modalMenuList}>
+        <li className={s.modalMenuItem}>
+          <Link to="/">Home</Link>
         </li>
-        <li>
-          <Link>Trands</Link>
+        <li className={s.modalMenuItem}>
+          <Link to="/library">Library</Link>
         </li>
-        <li>
-          <Link>Siries</Link>
-        </li>
-        <li>
-          <Link>Genres</Link>
-        </li>
-        <li>
-          <Link>Library</Link>
+        <li className={s.modalMenuItem}>
+          <Link to="/genres">Genres</Link>
         </li>
       </ul>
+
       <Link className={s.login}>
-        <FaRegUserCircle />
+        <FaRegUserCircle className={s.loginIcon} />
         Sign In
       </Link>
     </div>
