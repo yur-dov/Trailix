@@ -3,16 +3,31 @@ import "./App.css";
 
 import SharedLayout from "./components/SharedLayout";
 import Library from "./components/Library/Library";
-import Favorites from "./components/Favorites/Favorites";
-import Home from "./pages/Home";
+import Home from "./pages/Home/Home";
+import PageWrapper from "./components/PageWrapper";
+// import Favorites from "./components/Favorites/Favorites";
 
 function App() {
   return (
     <Routes>
       <Route path="/" element={<SharedLayout />}>
-        <Route index element={<Home />} />
-        <Route path="library" element={<Library />} />
-        <Route path="trands" element={<Favorites />} />
+        <Route
+          index
+          element={
+            <PageWrapper>
+              <Home />
+            </PageWrapper>
+          }
+        />
+        <Route
+          path="library"
+          element={
+            <PageWrapper>
+              <Library />
+            </PageWrapper>
+          }
+        />
+        {/* <Route path="trands" element={<Favorites />} /> */}
       </Route>
     </Routes>
   );
