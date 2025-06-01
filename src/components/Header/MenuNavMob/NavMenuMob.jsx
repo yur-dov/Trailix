@@ -24,10 +24,10 @@ function NavMenuMob() {
         </li>
 
         <li className={s.navigateItem}>
-          <button className={s.navigateBtn}>
+          <Link to="/" className={s.navigateBtn}>
             <FaHome className={s.btnIcon} />
             <span className={s.btnText}>Home</span>
-          </button>
+          </Link>
         </li>
 
         <li className={s.navigateItem}>
@@ -38,10 +38,10 @@ function NavMenuMob() {
         </li>
 
         <li className={s.navigateItem}>
-          <button className={s.navigateBtn}>
+          <Link to="/library" className={s.navigateBtn}>
             <MdOutlineVideoLibrary className={s.btnIcon} />
             <span className={s.btnText}>Library</span>
-          </button>
+          </Link>
         </li>
       </ul>
     </div>
