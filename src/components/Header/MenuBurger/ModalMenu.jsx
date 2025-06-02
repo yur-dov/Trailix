@@ -1,5 +1,6 @@
 import s from "./ModalMenu.module.css";
 
+import { createPortal } from "react-dom";
 import { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 
@@ -29,7 +30,7 @@ function ModalMenu({ onCloseModal, showModal }) {
     }
   }, [showModal]);
 
-  return (
+  return createPortal(
     <div className={s.modalContainer} ref={modalRef}>
       <div className={s.modalMenuHeaderWrapp}>
         <p className={s.logo}>
@@ -64,7 +65,8 @@ function ModalMenu({ onCloseModal, showModal }) {
         <FaRegUserCircle className={s.loginIcon} />
         Sign In
       </Link>
-    </div>
+    </div>,
+    document.body
   );
 }
 export default ModalMenu;
