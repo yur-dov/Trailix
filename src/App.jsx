@@ -2,7 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import "./App.css";
 
 import SharedLayout from "./components/SharedLayout";
-import Library from "./components/Library/Library";
+import Library from "./pages/Library/Library";
 import Home from "./pages/Home/Home";
 import PageWrapper from "./components/PageWrapper";
 // import Favorites from "./components/Favorites/Favorites";

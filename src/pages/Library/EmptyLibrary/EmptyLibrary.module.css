@@ -1,22 +1,7 @@
-.BannerWrapper {
-  width: 380px;
-  height: 500px;
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.BannerImg {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-}
 .BannerOverlay {
   position: relative;
   width: 100%;
-  /* height: 200px; */
+  height: 500px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -33,24 +18,24 @@
   background: rgba(0, 0, 0, 0.7); /* ← регулируй силу затемнения */
   z-index: 1;
 }
+.BannerImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
 .BannerText {
   padding: 15px;
   width: 100%;
+  color: rgba(255, 255, 255, 0.656);
   position: absolute;
-  bottom: 100px;
+  top: 140px;
   left: 50%;
   transform: translateX(-50%);
   font-family: Ubuntu;
   font-weight: 300;
-  font-size: 34px;
+  font-size: 16px;
   letter-spacing: 0%;
   text-align: center;
   z-index: 2;
-}
-.BannerText span {
-  font-family: Ubuntu;
-  font-weight: 700;
-  font-size: 38px;
-  letter-spacing: 0%;
-  text-align: center;
 }
