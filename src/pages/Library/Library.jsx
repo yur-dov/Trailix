@@ -1,12 +1,12 @@
-import s from "./Library.module.css";
+// import s from "./Library.module.css";
+// import { useState } from "react";
 import EmptyLibrary from "./EmptyLibrary/EmptyLibrary";
-import { useState } from "react";
+import Container from "../../components/Container/Container";
 
 export default function Library() {
-  const [isEmpty, setIsEmpty] = useState(true);
+  const isEmpty = true;
+  // const [isEmpty, setIsEmpty] = useState(true);
   return (
-    <div className={s.Library}>
-      {isEmpty ? <EmptyLibrary /> : <h2>Your Library</h2>}
-    </div>
+    <Container>{isEmpty ? <EmptyLibrary /> : <h2>Your Library</h2>}</Container>
   );
 }
