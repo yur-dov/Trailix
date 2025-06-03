@@ -1,4 +1,4 @@
-import banner from "../../assets/banner-home.avif";
+import banner from "../../assets/Banner-home.avif";
 import Container from "../../components/Container/Container";
 import TrandingFilms from "../../components/TrandingFilms/TrandingFilms";
 
