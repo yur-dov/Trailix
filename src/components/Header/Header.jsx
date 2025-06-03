@@ -1,7 +1,10 @@
 import { Link, useLocation } from "react-router-dom";
+import { useState } from "react";
 import { useMediaQuery } from "react-responsive";
+
 import NavMenuMob from "./MenuNavMob/NavMenuMob";
 import ModalMenu from "./MenuBurger/ModalMenu";
+
 import { GiHamburgerMenu } from "react-icons/gi";
 
 import s from "./Header.module.css";
@@ -9,16 +12,18 @@ import s from "./Header.module.css";
 export default function Header() {
   const { pathname } = useLocation();
   const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
-  // const showModal = true;
-  const showModal = false;
+  const [modalOpen, setModalOpen] = useState(false);
 
+  const toggleModal = () => {
+    setModalOpen((prev) => !prev);
+  };
   return (
     <header className={s.header}>
       <p className={s.logo}>
         TRAIL<span>IX</span>
       </p>
 
-      <button className={s.menuBtn}>
+      <button className={s.menuBtn} onClick={toggleModal}>
         <GiHamburgerMenu className={s.menuBtnIcon} />
       </button>
 
@@ -48,7 +53,9 @@ export default function Header() {
         </ul>
       </nav>
 
-      {showModal && <ModalMenu />}
+      {modalOpen && (
+        <ModalMenu showModal={modalOpen} onCloseModal={toggleModal} />
+      )}
       {isMobile && <NavMenuMob />}
     </header>
   );

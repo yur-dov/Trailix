@@ -1,0 +1,41 @@
+.BannerOverlay {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: #2d2738;
+}
+.BannerOverlay::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7); /* ← регулируй силу затемнения */
+  z-index: 1;
+}
+.BannerImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.BannerText {
+  padding: 15px;
+  width: 100%;
+  color: rgba(255, 255, 255, 0.656);
+  position: absolute;
+  top: 140px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: Ubuntu;
+  font-weight: 300;
+  font-size: 16px;
+  letter-spacing: 0%;
+  text-align: center;
+  z-index: 2;
+}

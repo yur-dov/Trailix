@@ -5,7 +5,14 @@
   top: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.9);
+  /* z-index: 9999; */
   padding: 22px;
+}
+.modalMenuHeaderWrapp {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .logo {
   color: rgb(240, 223, 197);
@@ -16,4 +23,69 @@
 }
 .logo span {
   color: #00bfff;
+}
+.closeBtn {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.closeBtnIcon {
+  color: white;
+  width: 40px;
+  height: 40px;
+}
+.searchForm {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+}
+.searchInput {
+  width: 320px;
+  height: 50px;
+  padding: 0 10px;
+  border-radius: 15px;
+  border: none;
+  background: rgba(35, 34, 41, 1);
+  font-size: 20px;
+  color: rgba(78, 76, 94, 1);
+}
+.searchBtn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 0 15px 15px 0;
+  border: none;
+  background: rgba(35, 34, 41, 1);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.searchBtnIcon {
+  color: white;
+  width: 30px;
+  height: 30px;
+}
+.modalMenuList {
+  margin-top: 25px;
+  margin-left: 15px;
+}
+.modalMenuItem {
+  margin-top: 35px;
+}
+.login {
+  display: flex;
+  align-items: center;
+  margin-left: 15px;
+  margin-top: 35px;
+}
+.loginIcon {
+  color: white;
+  margin-right: 10px;
 }

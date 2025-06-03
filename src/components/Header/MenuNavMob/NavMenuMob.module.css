@@ -1,4 +1,5 @@
 .navigate {
+  z-index: 1000;
   width: 380px;
   padding: 10px;
   position: fixed;

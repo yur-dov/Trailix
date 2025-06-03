@@ -3,7 +3,7 @@ import { FaHome, FaFilm } from "react-icons/fa";
 import { MdOutlineVideoLibrary } from "react-icons/md";
 import { RiPlayList2Fill } from "react-icons/ri";
 import { BsFillCameraReelsFill } from "react-icons/bs";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function NavMenuMob() {
   return (
@@ -31,7 +31,7 @@ function NavMenuMob() {
         </li>
 
         <li className={s.navigateItem}>
-          <Link className={s.navigateBtn}>
+          <Link to="/genres" className={s.navigateBtn}>
             <RiPlayList2Fill className={s.btnIcon} />
             <span className={s.btnText}>Genres</span>
           </Link>
