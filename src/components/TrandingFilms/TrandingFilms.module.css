@@ -1,0 +1,31 @@
+.titleWrapper{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px 15px;
+}
+.addDesc{
+  overflow: hidden;
+}
+.title{
+  font-family: Ubuntu;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+.linkViewAll{
+  font-family: Ubuntu;
+font-weight: 400;
+font-size: 16px;
+text-decoration: underline;
+text-decoration-style: solid;
+}
+.trandList{
+  display: flex;
+  overflow: hidden;
+}
+.trandItem{
+  width: 110px;
+height: 150px;
+}
