@@ -1,6 +1,6 @@
 .section {
   /* padding: 40px 0; */
-  background-color: #1fb4c5;
+  background: rgba(25, 25, 25, 1);
 }
 
 .container {
@@ -8,7 +8,7 @@
   width: 100%;
   max-width: 100%;
   box-sizing: border-box;
-  background-color: #913939;
+
 }
 
 @media (min-width: 381px) {

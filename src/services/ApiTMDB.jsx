@@ -21,3 +21,13 @@ export const fetchTrendingMovies = async () => {
     throw error;
   }
 };
+
+export const getGenres = async () => {
+  try {
+    const response = await tmdb.get("/genre/movie/list");
+    return response.data.genres;
+  } catch (error) {
+    console.error("Ошибка при получении жанров:", error);
+    throw error;
+  }
+};
