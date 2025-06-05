@@ -8,14 +8,17 @@
   transform: translateX(-50%);
   background-color: #000000;
 }
+
 .navigateList {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
 }
+
 .navigateItem {
   /* display: block; */
 }
+
 .navigateBtn {
   width: 56px;
   height: 48px;
@@ -26,12 +29,15 @@
   justify-content: center;
   align-items: center;
   border-radius: 7px;
+  background-color: rgba(35, 34, 41, 1);
   border: 1px solid rgba(40, 40, 40, 1);
 }
+
 .btnIcon {
   width: 24px;
   height: 24px;
 }
+
 .btnText {
   font-size: 14px;
   font-weight: 500;

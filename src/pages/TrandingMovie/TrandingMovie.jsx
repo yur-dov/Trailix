@@ -1,11 +1,23 @@
-import React from "react";
-// import TrandingFilms from "../../components/TrandingFilms/TrandingFilms";
+import { useEffect, useState } from "react";
+import { fetchTrendingMovies } from "../../services/ApiTMDB";
 
 function TrandingMovie() {
+  const [films, setFilms] = useState([]);
+  const [genres, setGenres] = useState([]);
+  useEffect(() => {
+    const getTrandFilms = async () => {
+      try {
+        const data = await fetchTrendingMovies();
+        setFilms(data);
+      } catch (error) {
+        console.error("Error fetching trending movies:", error);
+      }
+    };
+    getTrandFilms();
+  }, []);
   return (
     <div>
-      {/* <TrandingFilms /> */}
-      <h2>Tranding films Blok</h2>
+      <h3></h3>
     </div>
   );
 }

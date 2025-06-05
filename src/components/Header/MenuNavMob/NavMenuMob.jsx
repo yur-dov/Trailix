@@ -17,10 +17,10 @@ function NavMenuMob() {
         </li>
 
         <li className={s.navigateItem}>
-          <button className={s.navigateBtn}>
+          <Link className={s.navigateBtn}>
             <BsFillCameraReelsFill className={s.btnIcon} />
             <span className={s.btnText}>Series</span>
-          </button>
+          </Link>
         </li>
 
         <li className={s.navigateItem}>

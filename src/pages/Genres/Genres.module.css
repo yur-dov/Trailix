@@ -1,0 +1,20 @@
+.genreList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  padding-top: 26px;
+}
+
+.genreitem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 130px;
+  height: 60px;
+  padding: 10px;
+  background-color: rgba(37, 37, 37, 1);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}

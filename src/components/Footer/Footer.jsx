@@ -1,4 +1,5 @@
 import Container from "../Container/Container";
+import { Link } from "react-router-dom";
 import s from "./Footer.module.css";
 import { FaRegUserCircle, FaLinkedin, FaGithub, FaPlus } from "react-icons/fa";
 import { FaSquareUpwork } from "react-icons/fa6";
@@ -17,14 +18,18 @@ function Footer() {
           </li>
 
           <li className={s.navItem}>
-            <p className={s.signIn}>Home</p>
+            <Link to={"/"} className={s.signIn}>
+              Home
+            </Link>
             <button className={s.buttonAdd}>
               <FaPlus className={s.iconAdd} />
             </button>
           </li>
 
           <li className={s.navItem}>
-            <p className={s.signIn}>Library</p>
+            <Link to={"/library"} className={s.signIn}>
+              Library
+            </Link>
             <button className={s.buttonAdd}>
               <FaPlus className={s.iconAdd} />
             </button>
