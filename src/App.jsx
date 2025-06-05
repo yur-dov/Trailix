@@ -5,6 +5,7 @@ import SharedLayout from "./components/SharedLayout";
 import Library from "./pages/Library/Library";
 import Home from "./pages/Home/Home";
 import PageWrapper from "./components/PageWrapper";
+import TrandingMovie from "./pages/trandingMovie/TrandingMovie";
 // import Favorites from "./components/Favorites/Favorites";
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
             </PageWrapper>
           }
         />
+        <Route path="tranding" element={<TrandingMovie />} />
         {/* <Route path="trands" element={<Favorites />} /> */}
       </Route>
     </Routes>

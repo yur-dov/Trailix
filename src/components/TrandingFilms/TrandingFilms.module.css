@@ -4,9 +4,7 @@
   width: 100%;
   padding: 10px 15px;
 }
-.addDesc {
-  overflow: hidden;
-}
+
 .title {
   font-family: Ubuntu;
   font-weight: 400;
@@ -14,6 +12,7 @@
   line-height: 100%;
   letter-spacing: 0%;
 }
+
 .linkViewAll {
   font-family: Ubuntu;
   font-weight: 400;
@@ -21,25 +20,43 @@
   text-decoration: underline;
   text-decoration-style: solid;
 }
-.trandList {
+
+.sliderWrapper {
+  overflow-x: auto;
+  padding: 0 16px;
+  padding-bottom: 16px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.sliderWrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.sliderWrapper.animating {
+  scroll-snap-type: none !important;
+}
+
+.slider {
   display: flex;
   gap: 16px;
-  padding-left: 16px;
-  padding-bottom: 16px;
   width: max-content;
 }
-.trandItem {
-  width: 150px;
 
-  flex: 0 0 auto;
+.card {
+  flex: 0 0 65vw;
+  max-width: 150px;
   scroll-snap-align: start;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s;
 }
-.trandImg {
+
+.cardImg {
   display: block;
   width: 100%;
   height: auto;
+  border-radius: 12px;
 }
