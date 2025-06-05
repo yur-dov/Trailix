@@ -10,10 +10,10 @@ function NavMenuMob() {
     <div className={s.navigate}>
       <ul className={s.navigateList}>
         <li className={s.navigateItem}>
-          <button className={s.navigateBtn}>
+          <Link to="/tranding" className={s.navigateBtn}>
             <FaFilm className={s.btnIcon} />
             <span className={s.btnText}>Trand</span>
-          </button>
+          </Link>
         </li>
 
         <li className={s.navigateItem}>
@@ -36,7 +36,6 @@ function NavMenuMob() {
             <span className={s.btnText}>Genres</span>
           </Link>
         </li>
-
 
         <li className={s.navigateItem}>
           <Link to="/library" className={s.navigateBtn}>
