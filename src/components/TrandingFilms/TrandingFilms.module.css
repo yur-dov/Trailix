@@ -1,31 +1,45 @@
-.titleWrapper{
+.titleWrapper {
   display: flex;
   justify-content: space-between;
   width: 100%;
   padding: 10px 15px;
 }
-.addDesc{
+.addDesc {
   overflow: hidden;
 }
-.title{
+.title {
   font-family: Ubuntu;
   font-weight: 400;
   font-size: 16px;
   line-height: 100%;
   letter-spacing: 0%;
 }
-.linkViewAll{
+.linkViewAll {
   font-family: Ubuntu;
-font-weight: 400;
-font-size: 16px;
-text-decoration: underline;
-text-decoration-style: solid;
+  font-weight: 400;
+  font-size: 16px;
+  text-decoration: underline;
+  text-decoration-style: solid;
 }
-.trandList{
+.trandList {
   display: flex;
-  overflow: hidden;
+  gap: 16px;
+  padding-left: 16px;
+  padding-bottom: 16px;
+  width: max-content;
 }
-.trandItem{
-  width: 110px;
-height: 150px;
+.trandItem {
+  width: 150px;
+
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+}
+.trandImg {
+  display: block;
+  width: 100%;
+  height: auto;
 }
