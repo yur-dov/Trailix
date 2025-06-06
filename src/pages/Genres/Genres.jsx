@@ -18,7 +18,7 @@ function Genres() {
   }, []);
 
   return (
-    <Container>
+    <Container className={s.container}>
       <ul className={s.genreList}>
         {genres.map((genre) => (
           <li key={genre.id} className={s.genreitem}>
