@@ -18,11 +18,8 @@ function TrandingMovie() {
           fetchTrendingMovies(),
           getGenres(),
         ]);
-        console.log(genres);
-
-        setGenres(genres);
         setFilms(data);
-        console.log(data);
+        setGenres(genres);
       } catch (error) {
         console.error("Error fetching genres/trending movies:", error);
       }
