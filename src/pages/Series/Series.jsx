@@ -36,6 +36,7 @@ function Series() {
                 className={s.seriesPoster}
               />
               <h3 className={s.seriesTitle}>{item.name}</h3>
+              <p>{item.overview}</p>
             </li>
           </Link>
         ))}
