@@ -20,7 +20,7 @@ function TrandFilmDetails() {
       }
     };
     fetchData();
-  }, []);
+  }, [id]);
 
   const { title, poster_path, release_date, overview } = film;
 

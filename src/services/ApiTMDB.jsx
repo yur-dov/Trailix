@@ -22,6 +22,16 @@ export const fetchTrendingMovies = async () => {
   }
 };
 
+export const getSeries = async () => {
+  try {
+    const response = await tmdb.get("/discover/tv");
+    return response.data.results;
+  } catch (error) {
+    console.error("Ошибка при получении сериалов:", error);
+    throw error;
+  }
+};
+
 export const getFilmById = async (id) => {
   try {
     const response = await tmdb.get(`/movie/${id}`);
