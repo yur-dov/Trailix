@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import {
   fetchTrendingMovies,
   getGenres,
@@ -18,6 +19,7 @@ function TrandingMovie() {
           fetchTrendingMovies(),
           getGenres(),
         ]);
+
         setFilms(data);
         setGenres(genres);
       } catch (error) {
@@ -33,23 +35,25 @@ function TrandingMovie() {
       <h2 className={s.TrandingMovieTitle}> Зараз у кіно</h2>
       <ul className={s.movieList}>
         {films.map((film) => (
-          <li key={film.id} className={s.movieItem}>
-            <img
-              src={`${BASE_IMG_URL}${film.poster_path}`}
-              alt=""
-              className={s.moviePoster}
-            />
-            <h3 className={s.MovieTitle}>{film.title}</h3>
-            <p className={s.MovieGenres}>
-              {film.genre_ids
-                .map((id) => {
-                  const genre = genres.find((g) => g.id === id);
-                  return genre ? genre.name : null;
-                })
-                .filter(Boolean) // убрать null если жанр не найден
-                .join(", ")}
-            </p>
-          </li>
+          <Link to={`${film.id}`} key={film.id}>
+            <li className={s.movieItem}>
+              <img
+                src={`${BASE_IMG_URL}${film.poster_path}`}
+                alt=""
+                className={s.moviePoster}
+              />
+              <h3 className={s.MovieTitle}>{film.title}</h3>
+              <p className={s.MovieGenres}>
+                {film.genre_ids
+                  .map((id) => {
+                    const genre = genres.find((g) => g.id === id);
+                    return genre ? genre.name : null;
+                  })
+                  .filter(Boolean)
+                  .join(", ")}
+              </p>
+            </li>
+          </Link>
         ))}
       </ul>
     </Container>
