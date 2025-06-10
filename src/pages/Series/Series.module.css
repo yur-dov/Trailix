@@ -1,0 +1,25 @@
+.seriesList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+
+.seriesItem {
+  width: 150px;
+  margin-bottom: 10px;
+}
+
+.seriesPoster {
+  border-radius: 10px;
+}
+
+.seriesTitle {
+  font-family: Ubuntu;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 130%;
+  letter-spacing: 0%;
+  margin-top: 8px;
+}

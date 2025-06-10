@@ -7,6 +7,7 @@ import PageWrapper from "./components/PageWrapper";
 import TrandingMovie from "./pages/TrandingMovie/TrandingMovie";
 import Genres from "./pages/Genres/Genres";
 import TrandFilmDetails from "./components/TrandingFilms/TrandFilmDetails/TrandFilmDetails";
+import Series from "./pages/Series/Series";
 // import Favorites from "./components/Favorites/Favorites";
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
         <Route path="tranding" element={<TrandingMovie />} />
         <Route path="tranding/:id" element={<TrandFilmDetails />} />
         <Route path="genres" element={<Genres />} />
+        <Route path="series" element={<Series />} />
         {/* <Route path="trands" element={<Favorites />} /> */}
       </Route>
     </Routes>
