@@ -23,6 +23,7 @@ function TrandingFilms() {
       } catch (error) {
         console.error("Error fetching trending movies:", error);
       }
+
     };
     getTrandFilms();
   }, []);
