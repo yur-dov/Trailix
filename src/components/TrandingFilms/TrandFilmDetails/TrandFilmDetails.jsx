@@ -30,7 +30,7 @@ function TrandFilmDetails() {
     fetchData();
   }, [id]);
 
-  const { title, poster_path, genres, release_date, runtime, vote_average } =
+  const { title, poster_path, genres, release_date, runtime, vote_average, overview } =
     film;
 
   return (
@@ -49,8 +49,8 @@ function TrandFilmDetails() {
           Trailer
         </Link>
       </div>
-      <div className={s.titleWrapper}>
         <h3 className={s.title}>{title}</h3>
+
         <button
           onClick={() => setIsBookmarked(!isBookmarked)}
           className={s.btnBookmark}
@@ -61,29 +61,26 @@ function TrandFilmDetails() {
             <FaRegBookmark className={s.iconBookmark} />
           )}
         </button>
-      </div>
-      <ul>
-        <li>
-          <span>Release date:</span>
-          <span>{release_date}</span>
-        </li>
-        <li>
-          <span>Genres</span>
-          <span>
-            {Array.isArray(genres) && genres.length > 0
+
+      <div className={s.itemDescription}>
+        <span className={s.textDescription}>Release data:</span>
+        <span className={s.textDescription}>{release_date}</span>
+        <span className={s.textDescription}>Genres:</span>
+        <span className={s.textDescription}> {Array.isArray(genres) && genres.length > 0
               ? genres.map((g) => g.name).join(", ")
-              : "-"}
-          </span>
-        </li>
-        <li>
-          <span>Raiting</span>
-          <span>{vote_average}</span>
-        </li>
-        <li>
-          <span>Runtime</span>
-          <span>{runtime}</span>
-        </li>
-      </ul>
+              : "-"}</span>
+        <span className={s.textDescription}>Raiting</span>
+        <span className={s.textDescription}>{vote_average}</span>
+        <span className={s.textDescription}>Runtime:</span>
+        <span className={s.textDescription}>{runtime} min</span>
+        <span className={s.textDescription}></span>
+        <span className={s.textDescription}></span>
+      </div>
+      <div className={s.overviewWrapper}>
+        <h4 className={s.overviewTitle}>Overview:</h4>
+        <p className={s.overviewText}>{overview}</p>
+      </div>
+
     </Container>
   );
 }

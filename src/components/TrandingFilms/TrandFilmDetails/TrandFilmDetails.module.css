@@ -53,14 +53,18 @@
   padding: 0 40px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .title {
   font-family: Ubuntu;
-  font-weight: 400;
-  font-size: 16px;
+  font-weight: 700;
+  font-size: 20px;
   line-height: 100%;
   letter-spacing: 0%;
+  margin-left: auto;
+  margin-right: auto;
+  display: inline-block;
 }
 
 .btnBookmark {
@@ -77,4 +81,38 @@
 .iconBookmark {
   width: 20px;
   height: 20px;
+}
+.itemDescription{
+  width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.textDescription{
+  display: inline-block;
+  width: 130px;
+}
+.overviewWrapper{
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 320px;
+}
+.overviewTitle{
+  margin-bottom: 10px;
+  font-family: Ubuntu;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+.overviewText{
+  font-family: Ubuntu;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 120%;
 }
