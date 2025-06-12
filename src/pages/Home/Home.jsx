@@ -1,6 +1,6 @@
 import banner from "../../assets/Banner-home.avif";
 import Container from "../../components/Container/Container";
-import TrandingFilms from "../../components/TrandingFilms/TrandingFilms";
+import TrandingFilms from "../../components/TrandingFilms/TrandFilmSlider/TrandingFilms";
 
 import s from "./Home.module.css";
 

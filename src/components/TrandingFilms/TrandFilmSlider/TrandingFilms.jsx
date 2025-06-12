@@ -1,9 +1,9 @@
 import { useEffect, useRef, useState } from "react";
-import { fetchTrendingMovies, BASE_IMG_URL } from "../../services/ApiTMDB";
+import { fetchTrendingMovies, BASE_IMG_URL } from "../../../services/ApiTMDB";
 import { Link } from "react-router-dom";
 import gsap from "gsap";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
-import Container from "../Container/Container";
+import Container from "../../Container/Container";
 import s from "./TrandingFilms.module.css";
 
 gsap.registerPlugin(ScrollToPlugin);
@@ -23,7 +23,6 @@ function TrandingFilms() {
       } catch (error) {
         console.error("Error fetching trending movies:", error);
       }
-
     };
     getTrandFilms();
   }, []);
