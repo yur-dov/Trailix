@@ -1,18 +1,20 @@
 .btnGoBack {
   margin-top: 20px;
   margin-left: 10px;
-
   display: flex;
   justify-content: center;
   align-items: center;
   width: 30px;
   height: 30px;
   border: 2px solid rgb(255, 255, 255);
-  background-color: rgb(232,
-      124,
-      0);
+  background-color: #00bfff;
   border-radius: 50%;
   position: absolute;
+  z-index: 10;
+}
+
+.imgWrapper {
+  position: relative
 }
 
 .imgBanner {
@@ -28,7 +30,7 @@
   align-items: center;
   width: 150px;
   height: 50px;
-  background-color: rgb(232, 124, 0);
+  background-color: #00bfff;
   border: none;
   border-radius: 15px;
   margin-left: auto;
@@ -41,36 +43,19 @@
 
 }
 
-.icon {
+.trailerBtnIcon {
   margin-right: 10px;
   width: 28px;
   height: 28px;
 }
 
-.titleWrapper {
-  margin-top: 20px;
-  display: flex;
-  padding: 0 40px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.title {
-  font-family: Ubuntu;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 100%;
-  letter-spacing: 0%;
-  margin-left: auto;
-  margin-right: auto;
-  display: inline-block;
-}
-
 .btnBookmark {
+  position: absolute;
+  bottom: 0;
+  right: 25px;
   color: white;
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.527);
   border-radius: 50%;
   display: flex;
@@ -82,27 +67,84 @@
   width: 20px;
   height: 20px;
 }
-.itemDescription{
+
+
+.title {
+  margin-bottom: 20px;
+  font-family: Ubuntu;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 100%;
+  text-align: center;
+  margin-top: 20px;
+
+}
+
+.descriptionlist {
   width: 320px;
   margin-left: auto;
   margin-right: auto;
+
+
+}
+
+.descriptionTitle {
+  margin-bottom: 10px;
+  font-family: Ubuntu;
+  font-weight: 500;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
-  padding-bottom: 10px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 16px;
+  line-height: 100%;
+
 }
-.textDescription{
-  display: inline-block;
-  width: 130px;
+
+.descriptionText {
+  font-family: Ubuntu;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 100%;
+  margin-left: 10px;
+  color: #00bfff;
 }
-.overviewWrapper{
+
+.tmdbFlag {
+  width: 40px;
+  height: 20px;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 12px;
+  background-color: #00bfff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  margin-right: 5px;
+}
+
+
+.runtime,
+.releaseDate,
+.raiting {
+  color: rgba(255, 255, 255, 0.833);
+  display: flex;
+  align-items: center;
+}
+
+.iconClock {
+  width: 18px;
+  height: 18px;
+  margin-right: 5px;
+}
+
+.overviewWrapper {
   margin-top: 30px;
   margin-left: auto;
   margin-right: auto;
   width: 320px;
 }
-.overviewTitle{
+
+.overviewTitle {
   margin-bottom: 10px;
   font-family: Ubuntu;
   font-weight: 500;
@@ -110,9 +152,11 @@
   line-height: 100%;
   letter-spacing: 0%;
 }
-.overviewText{
+
+.overviewText {
   font-family: Ubuntu;
   font-weight: 300;
   font-size: 14px;
-  line-height: 120%;
+  line-height: 130%;
+  letter-spacing: 1px;
 }
