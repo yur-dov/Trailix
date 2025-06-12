@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import SharedLayout from "./components/SharedLayout";
 import Library from "./pages/Library/Library";
 import Home from "./pages/Home/Home";
-import PageWrapper from "./components/PageWrapper";
+import PageWrapper from "./components/Utils/PageWrapper";
 import TrandingMovie from "./pages/TrandingMovie/TrandingMovie";
 import Genres from "./pages/Genres/Genres";
 import TrandFilmDetails from "./components/TrandingFilms/TrandFilmDetails/TrandFilmDetails";
