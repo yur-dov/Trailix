@@ -45,11 +45,10 @@ function TrandFilmDetails() {
 
   return (
     <Container>
-      <Link to="/tranding" className={s.btnGoBack}>
-        <FaArrowLeft />
-      </Link>
-
       <div className={s.imgWrapper}>
+        <Link to="/tranding" className={s.btnGoBack}>
+          <FaArrowLeft />
+        </Link>
         <img
           src={`${BASE_IMG_URL}${poster_path}`}
           alt={title}
