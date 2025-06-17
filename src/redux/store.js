@@ -1,10 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
 import savedFilmsReducer from "./savedFilmsSlice";
 
-const store = configureStore({
+// import { devToolsEnhancer } from "@redux-devtools/extension";
+// console.log("Redux DevTools Enhancer:", devToolsEnhancer);
+
+export const store = configureStore({
   reducer: {
     savedFilms: savedFilmsReducer,
   },
 });
-
-export default store;

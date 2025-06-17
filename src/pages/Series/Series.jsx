@@ -23,7 +23,7 @@ function Series() {
 
   return (
     <Container>
-      <h2>Series</h2>
+      <h2 className={s.seriesTitle}>Нові серіали</h2>
       <ul className={s.seriesList}>
         {series.map((item) => (
           <li className={s.seriesItem} key={item.id}>

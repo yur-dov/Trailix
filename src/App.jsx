@@ -4,7 +4,7 @@ import SharedLayout from "./components/SharedLayout";
 import Library from "./pages/Library/Library";
 import Home from "./pages/Home/Home";
 import PageWrapper from "./components/Utils/PageWrapper";
-import TrandingMovie from "./pages/TrandingMovie/TrandingMovie";
+import TrandingMovie from "./pages/trandingMovie/TrandingMovie";
 import Genres from "./pages/Genres/Genres";
 import TrandFilmDetails from "./components/TrandingFilms/TrandFilmDetails/TrandFilmDetails";
 import Series from "./pages/Series/Series";
