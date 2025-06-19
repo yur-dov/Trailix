@@ -2,15 +2,15 @@ import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
 import { useMediaQuery } from "react-responsive";
 
-import NavMenuMob from "./MenuNavMob/NavMenuMob";
-import ModalMenu from "./MenuBurger/ModalMenu";
-
 import { GiHamburgerMenu } from "react-icons/gi";
 import { FaRegUserCircle } from "react-icons/fa";
 
+import NavMenuMob from "./MenuNavMob/NavMenuMob";
+import ModalMenu from "./MenuBurger/ModalMenu";
+
 import s from "./Header.module.css";
 
-export default function Header() {
+function Header() {
   const { pathname } = useLocation();
   const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
   const [modalOpen, setModalOpen] = useState(false);
@@ -54,19 +54,12 @@ export default function Header() {
               Избранное
             </Link>
           </li>
-          <li>
-            <Link
-              to="/watchlist"
-              className={pathname === "/watchlist" ? s.active : ""}
-            >
-              <div className={s.signInEWrapper}>
-                <FaRegUserCircle className={s.iconSignIn} />
-                <p className={s.signIn}>Sing In</p>
-              </div>
-            </Link>
-          </li>
         </ul>
       </nav>
+      <div className={s.signInEWrapper}>
+        <FaRegUserCircle className={s.iconSignIn} />
+        <p className={s.signIn}>Sing In</p>
+      </div>
 
       {modalOpen && (
         <ModalMenu showModal={modalOpen} onCloseModal={toggleModal} />
@@ -76,3 +69,5 @@ export default function Header() {
     </header>
   );
 }
+
+export default Header;
