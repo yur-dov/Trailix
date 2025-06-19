@@ -1,5 +1,4 @@
 .section {
-  /* padding: 40px 0; */
   background: rgba(25, 25, 25, 1);
 }
 
@@ -13,7 +12,8 @@
 
 @media (min-width: 381px) {
   .container {
-    max-width: 380px;
+    /* max-width: 380px; */
+    width: 100%;
   }
 }
 
