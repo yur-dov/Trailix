@@ -1,9 +1,10 @@
 .BannerImg {
   width: 100%;
-  height: 500px;
+  min-height: 500px;
   object-fit: cover;
   object-position: center;
 }
+
 .BannerOverlay {
   position: relative;
   width: 100%;
@@ -14,6 +15,7 @@
   align-items: center;
   background-color: #2d2738;
 }
+
 .BannerOverlay::after {
   content: "";
   position: absolute;
@@ -21,9 +23,11 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.7); /* ← регулируй силу затемнения */
+  background: rgba(0, 0, 0, 0.7);
+  /* ← регулируй силу затемнения */
   z-index: 1;
 }
+
 .BannerText {
   padding: 15px;
   width: 100%;
@@ -38,6 +42,7 @@
   text-align: center;
   z-index: 2;
 }
+
 .BannerText span {
   font-family: Ubuntu;
   font-weight: 700;

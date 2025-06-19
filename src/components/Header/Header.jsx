@@ -6,6 +6,7 @@ import NavMenuMob from "./MenuNavMob/NavMenuMob";
 import ModalMenu from "./MenuBurger/ModalMenu";
 
 import { GiHamburgerMenu } from "react-icons/gi";
+import { FaRegUserCircle } from "react-icons/fa";
 
 import s from "./Header.module.css";
 
@@ -17,15 +18,18 @@ export default function Header() {
   const toggleModal = () => {
     setModalOpen((prev) => !prev);
   };
+
   return (
     <header className={s.header}>
       <p className={s.logo}>
         TRAIL<span>IX</span>
       </p>
 
-      <button className={s.menuBtn} onClick={toggleModal}>
-        <GiHamburgerMenu className={s.menuBtnIcon} />
-      </button>
+      {isMobile && (
+        <button className={s.menuBtn} onClick={toggleModal}>
+          <GiHamburgerMenu className={s.menuBtnIcon} />
+        </button>
+      )}
 
       <nav className={s.navWrapper}>
         <ul className={s.navList}>
@@ -50,12 +54,24 @@ export default function Header() {
               Избранное
             </Link>
           </li>
+          <li>
+            <Link
+              to="/watchlist"
+              className={pathname === "/watchlist" ? s.active : ""}
+            >
+              <div className={s.signInEWrapper}>
+                <FaRegUserCircle className={s.iconSignIn} />
+                <p className={s.signIn}>Sing In</p>
+              </div>
+            </Link>
+          </li>
         </ul>
       </nav>
 
       {modalOpen && (
         <ModalMenu showModal={modalOpen} onCloseModal={toggleModal} />
       )}
+
       {isMobile && <NavMenuMob />}
     </header>
   );

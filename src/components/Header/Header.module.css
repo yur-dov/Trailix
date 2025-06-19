@@ -1,60 +1,123 @@
 .header {
-  width: 380px;
+  max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 16px;
-  /* background-color: #111; */
   color: white;
+  width: 100%;
+  box-sizing: border-box;
 }
+
 .logo {
   color: rgb(240, 223, 197);
-  font-size: 30px;
-  font-style: normal;
+  font-size: 26px;
   font-family: sans-serif;
 }
+
 .logo span {
   font-weight: 900;
   color: #00bfff;
 }
+
 .menuBtn {
   width: 32px;
   height: 32px;
   color: white;
+  display: block;
 }
+
 .menuBtnIcon {
   width: 30px;
   height: 30px;
 }
+
 .menuBtnIcon:hover {
   cursor: pointer;
   transform: scale(1.1);
 }
+
 .navWrapper {
-  width: 100%;
-  @media (max-width: 768px) {
-    display: none;
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .navWrapper {
+    display: block;
+    width: auto;
+  }
+
+  .navList {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    list-style: none;
+  }
+
+  .navList a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    font-size: 16px;
+  }
+
+  .navList a:hover {
+    text-decoration: underline;
   }
 }
 
-.navList {
-  display: flex;
-  gap: 20px;
-  list-style: none;
+@media (min-width: 768px) and (max-width: 1023px) {
+  .logo {
+    font-size: 28px;
+  }
+
+  .navList a {
+    font-size: 14px;
+  }
 }
 
-.navList a {
-  text-decoration: none;
-  color: white;
-  font-weight: 500;
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .logo {
+    font-size: 32px;
+  }
+
+  .navList a {
+    font-size: 16px;
+  }
 }
 
-.navList a:hover {
-  text-decoration: underline;
+@media (min-width: 1440px) {
+  .header {
+    padding: 24px 48px;
+  }
+
+  .logo {
+    font-size: 36px;
+  }
+
+  .navList {
+    gap: 32px;
+  }
+
+  .navList a {
+    font-size: 18px;
+  }
 }
 
 .active {
   border-bottom: 2px solid #00bfff;
+}
+
+.signInEWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+}
+
+.iconSignIn {
+  width: 20px;
+  height: 20px;
 }
