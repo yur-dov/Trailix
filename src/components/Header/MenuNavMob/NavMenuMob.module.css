@@ -1,6 +1,7 @@
 .navigate {
   z-index: 1000;
-  width: 380px;
+
+  width: 100%;
   padding: 10px;
   position: fixed;
   bottom: 0;
@@ -10,13 +11,11 @@
 }
 
 .navigateList {
+  margin: auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-}
-
-.navigateItem {
-  /* display: block; */
+  max-width: 520px;
 }
 
 .navigateBtn {

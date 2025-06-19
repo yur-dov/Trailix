@@ -13,7 +13,7 @@
 
 .logo {
   color: rgb(240, 223, 197);
-  font-size: 26px;
+  font-size: 32px;
   font-family: sans-serif;
 }
 
@@ -43,7 +43,27 @@
   display: none;
 }
 
-@media (min-width: 768px) {
+.signInEWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
+
+.iconSignIn {
+  width: 20px;
+  height: 20px;
+}
+
+@media (min-width: 767px) {
+  .header {
+    padding: 16px 32px;
+  }
+
   .navWrapper {
     display: block;
     width: auto;
@@ -69,9 +89,6 @@
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
-  .logo {
-    font-size: 28px;
-  }
 
   .navList a {
     font-size: 14px;
@@ -79,9 +96,6 @@
 }
 
 @media (min-width: 1024px) and (max-width: 1439px) {
-  .logo {
-    font-size: 32px;
-  }
 
   .navList a {
     font-size: 16px;
@@ -108,16 +122,4 @@
 
 .active {
   border-bottom: 2px solid #00bfff;
-}
-
-.signInEWrapper {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 6px;
-}
-
-.iconSignIn {
-  width: 20px;
-  height: 20px;
 }

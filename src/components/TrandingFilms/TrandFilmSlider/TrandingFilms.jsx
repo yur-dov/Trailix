@@ -11,7 +11,7 @@ gsap.registerPlugin(ScrollToPlugin);
 function TrandingFilms() {
   const [films, setFilms] = useState([]);
   const sliderRef = useRef(null);
-  const scrollPos = useRef(0);
+  // const scrollPos = useRef(0);
 
   useEffect(() => {
     const getTrandFilms = async () => {
@@ -26,28 +26,6 @@ function TrandingFilms() {
     };
     getTrandFilms();
   }, []);
-
-  useEffect(() => {
-    if (!sliderRef.current || films.length === 0) return;
-    const slider = sliderRef.current;
-
-    const scrollInterval = setInterval(() => {
-      const maxScroll = slider.scrollWidth - slider.clientWidth;
-
-      scrollPos.current += 150;
-      if (scrollPos.current >= maxScroll) {
-        scrollPos.current = 0;
-      }
-      gsap.to(slider, {
-        scrollLeft: scrollPos.current,
-        duration: 1.2,
-        ease: "power2.inOut",
-        onComplete: () => slider.classList.remove("animating"),
-      });
-    }, 3000);
-
-    return () => clearInterval(scrollInterval);
-  }, [films]);
 
   return (
     <Container>
