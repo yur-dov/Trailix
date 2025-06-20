@@ -18,7 +18,8 @@
 }
 
 .moviePoster {
-
+  width: 100%;
+  height: 225px;
   border-radius: 10px;
 }
 

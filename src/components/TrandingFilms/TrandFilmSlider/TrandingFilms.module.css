@@ -23,8 +23,7 @@
 
 .sliderWrapper {
   overflow-x: auto;
-  padding: 0 16px;
-  padding-bottom: 16px;
+  margin-left: 16px;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
   -ms-overflow-style: none;
