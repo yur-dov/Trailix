@@ -13,7 +13,6 @@ function Series() {
       try {
         const data = await getSeries();
         setSeries(data);
-        console.log(data);
       } catch (error) {
         console.error("Error fetching series:", error);
       }

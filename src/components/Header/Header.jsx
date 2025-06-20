@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useMediaQuery } from "react-responsive";
 
 import { GiHamburgerMenu } from "react-icons/gi";
@@ -13,11 +13,21 @@ import s from "./Header.module.css";
 function Header() {
   const { pathname } = useLocation();
   const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
+  const [showNavigate, setShowNavigate] = useState(isMobile);
   const [modalOpen, setModalOpen] = useState(false);
 
   const toggleModal = () => {
     setModalOpen((prev) => !prev);
+    setShowNavigate((prev) => !prev);
   };
+
+  useEffect(() => {
+    if (modalOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+  }, [modalOpen]);
 
   return (
     <header className={s.header}>
@@ -65,7 +75,7 @@ function Header() {
         <ModalMenu showModal={modalOpen} onCloseModal={toggleModal} />
       )}
 
-      {isMobile && <NavMenuMob />}
+      {showNavigate && <NavMenuMob />}
     </header>
   );
 }

@@ -1,6 +1,7 @@
 import banner from "../../assets/Banner-home.avif";
 import Container from "../../components/Container/Container";
 import TrandingFilms from "../../components/TrandingFilms/TrandFilmSlider/TrandingFilms";
+import AllDevices from "../../components/AllDevices/AllDevices";
 
 import s from "./Home.module.css";
 
@@ -13,6 +14,7 @@ function Home() {
           Світові новинки кіно на <br /> <span>TRAILIX</span>
         </figcaption>
       </figure>
+      <AllDevices />
       <TrandingFilms />
     </Container>
   );

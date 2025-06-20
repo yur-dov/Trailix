@@ -15,8 +15,6 @@ const savedFilmsSlice = createSlice({
     },
   },
 });
-const toaddstring = "this is new string";
-console.log(toaddstring);
 
 export const { addFilm, removeFilm } = savedFilmsSlice.actions;
 export default savedFilmsSlice.reducer;
