@@ -1,0 +1,78 @@
+.container {
+  padding: 24px 16px;
+  text-align: center;
+  color: white;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.text {
+  font-size: 16px;
+  max-width: 600px;
+  margin: 0 auto 32px auto;
+  line-height: 1.5;
+}
+
+.deviceList {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  justify-items: center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.deviceItem figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #f0dfc5;
+}
+
+.deviceItem svg {
+  font-size: 36px;
+  color: #00bfff;
+}
+
+/* Планшет: 3 устройства в ряд */
+@media (min-width: 768px) {
+  .title {
+    font-size: 28px;
+  }
+
+  .text {
+    font-size: 18px;
+  }
+
+  .deviceList {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .deviceItem svg {
+    font-size: 42px;
+  }
+}
+
+/* Десктоп: 4 устройства */
+@media (min-width: 1024px) {
+  .title {
+    font-size: 32px;
+  }
+
+  .deviceList {
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .deviceItem svg {
+    font-size: 48px;
+  }
+}

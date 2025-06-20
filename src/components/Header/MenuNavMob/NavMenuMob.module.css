@@ -3,6 +3,7 @@
 
   width: 100%;
   padding: 10px;
+
   position: fixed;
   bottom: 0;
   left: 50%;
@@ -18,9 +19,10 @@
   max-width: 520px;
 }
 
+
 .navigateBtn {
-  width: 56px;
-  height: 48px;
+  width: 60px;
+  height: 52px;
   color: white;
   padding: 5px;
   display: flex;

@@ -77,7 +77,6 @@ function TrandingFilms() {
     const getTrandFilms = async () => {
       try {
         const data = await fetchTrendingMovies();
-        console.log(data);
 
         setFilms(data);
       } catch (error) {
@@ -96,8 +95,8 @@ function TrandingFilms() {
         </Link>
       </div>
 
-      <div className={s.sliderWrapper} ref={sliderRef}>
-        <div className={s.slider}>
+      <div className={s.sliderWrapper}>
+        <div className={s.slider} ref={sliderRef}>
           {films.map((film) => (
             <div key={film.id} className={s.card}>
               <img
