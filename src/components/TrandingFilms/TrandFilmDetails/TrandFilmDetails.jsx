@@ -23,9 +23,9 @@ function TrandFilmDetails() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const film = await getFilmById(id);
-        console.log(film);
-        setFilm(film);
+        const films = await getFilmById(id);
+        console.log(films);
+        setFilm(films);
       } catch (error) {
         console.error("Error fetching film details:", error);
       }
