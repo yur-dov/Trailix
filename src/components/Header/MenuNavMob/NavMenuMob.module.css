@@ -1,14 +1,16 @@
 .navigate {
   z-index: 1000;
-
   width: 100%;
   padding: 10px;
-
   position: fixed;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
   background-color: #000000;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
 }
 
 .navigateList {

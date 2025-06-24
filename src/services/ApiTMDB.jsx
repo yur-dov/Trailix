@@ -12,9 +12,11 @@ const tmdb = axios.create({
   },
 });
 
-export const fetchTrendingMovies = async () => {
+export const fetchTrendingMovies = async (page = 2) => {
   try {
-    const response = await tmdb.get("/trending/movie/day");
+    const response = await tmdb.get("/movie/popular", {
+      params: { page },
+    });
     return response.data.results;
   } catch (error) {
     console.error("Ошибка при получении трендовых фильмов:", error);

@@ -1,0 +1,21 @@
+.paginationWrapper {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin: 24px 0;
+
+}
+
+.pageButton {
+  font-weight: normal;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 4px 12px;
+  cursor: pointer;
+  background-color: #249ad9;
+  color: white;
+}
+
+.ellipsis {
+  padding: 4px 12px;
+}
