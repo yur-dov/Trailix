@@ -96,17 +96,20 @@ function TrandingFilms() {
       </div>
 
       <div className={s.sliderWrapper}>
-        <div className={s.slider} ref={sliderRef}>
+        <ul className={s.slider}>
           {films.map((film) => (
-            <div key={film.id} className={s.card}>
-              <img
-                src={`${BASE_IMG_URL}${film.poster_path}`}
-                alt={film.title}
-                className={s.cardImg}
-              />
-            </div>
+            <li key={film.id} className={s.card}>
+              <figure>
+                <img
+                  src={`${BASE_IMG_URL}${film.poster_path}`}
+                  alt={film.title}
+                  className={s.cardImg}
+                />
+                <figcaption className={s.cardCaption}>{film.title}</figcaption>
+              </figure>
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
     </Container>
   );

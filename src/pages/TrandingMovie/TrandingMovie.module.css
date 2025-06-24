@@ -18,9 +18,45 @@
 }
 
 .moviePoster {
+  position: relative;
   width: 100%;
   height: 225px;
   border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.moviePoster:hover {
+  transform: scale(1.02);
+}
+
+.moviePoster::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.2);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 10px;
+  pointer-events: none;
+}
+
+.moviePoster:hover::after {
+  opacity: 1;
+}
+
+.movieImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+}
+
+.movieImage:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s ease;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .MovieTitle {

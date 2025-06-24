@@ -43,11 +43,13 @@ function TrandingMovie() {
         {films.map((film) => (
           <Link to={`${film.id}`} key={film.id}>
             <li className={s.movieItem}>
-              <img
-                src={`${BASE_IMG_URL}${film.poster_path}`}
-                alt=""
-                className={s.moviePoster}
-              />
+              <div className={s.moviePoster}>
+                <img
+                  src={`${BASE_IMG_URL}${film.poster_path}`}
+                  alt=""
+                  className={s.movieImage}
+                />
+              </div>
               <h3 className={s.MovieTitle}>{film.title}</h3>
               <p className={s.MovieGenres}>
                 {film.genre_ids
@@ -61,7 +63,6 @@ function TrandingMovie() {
             </li>
           </Link>
         ))}
-        \
       </ul>
       <Pagination
         currentPage={page}
