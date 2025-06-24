@@ -1,10 +1,35 @@
 .tvTitle {
   padding: 20px;
-  margin-left: auto;
-  margin-right: auto;
-  ;
+  text-align: center;
+  color: #fff;
+}
+
+.tvContainer {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 340px;
+  margin: 0 auto;
+  aspect-ratio: 16 / 9;
 }
 
 .tvPoster {
-  width: 250px;
+  width: 320px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 6px;
+  position: absolute;
+  top: 20px;
+  left: 10px;
+  z-index: 0;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+
+}
+
+.tvImage {
+  position: relative;
+  width: 340px;
+  z-index: 1;
 }

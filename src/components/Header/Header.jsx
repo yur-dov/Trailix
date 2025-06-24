@@ -13,12 +13,10 @@ import s from "./Header.module.css";
 function Header() {
   const { pathname } = useLocation();
   const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
-  const [showNavigate, setShowNavigate] = useState(isMobile);
   const [modalOpen, setModalOpen] = useState(false);
 
   const toggleModal = () => {
     setModalOpen((prev) => !prev);
-    setShowNavigate((prev) => !prev);
   };
 
   useEffect(() => {
@@ -31,9 +29,9 @@ function Header() {
 
   return (
     <header className={s.header}>
-      <p className={s.logo}>
+      <Link to={"/"} className={s.logo}>
         TRAIL<span>IX</span>
-      </p>
+      </Link>
 
       {isMobile && (
         <button className={s.menuBtn} onClick={toggleModal}>
@@ -75,7 +73,7 @@ function Header() {
         <ModalMenu showModal={modalOpen} onCloseModal={toggleModal} />
       )}
 
-      {showNavigate && <NavMenuMob />}
+      <NavMenuMob />
     </header>
   );
 }
