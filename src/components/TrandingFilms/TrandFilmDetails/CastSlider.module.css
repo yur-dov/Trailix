@@ -4,3 +4,27 @@
   display: flex;
   justify-content: space-between;
 }
+
+.slider {
+  display: flex;
+  /* overflow-x: auto; */
+  scroll-snap-type: x mandatory;
+  gap: 20px;
+  padding-bottom: 20px;
+}
+
+.card {
+  flex: 0 0 65vw;
+  max-width: 150px;
+  scroll-snap-align: start;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.cardImg {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}

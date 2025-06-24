@@ -26,6 +26,7 @@ function TrandingMovie() {
         setFilms(data.results || data);
         setGenres(genres);
         setTotalPages(data.total_pages || 500);
+        console.log(data);
       } catch (error) {
         console.error("Error fetching genres/trending movies:", error);
       }

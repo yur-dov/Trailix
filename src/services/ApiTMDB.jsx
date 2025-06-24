@@ -3,6 +3,7 @@ import axios from "axios";
 const API_KEY = "3ba4340a00379f6d058ad68986d9cedc";
 const BASE_URL = "https://api.themoviedb.org/3";
 export const BASE_IMG_URL = "https://image.tmdb.org/t/p/w500";
+export const BASE_IMG_URL_CAST = "https://image.tmdb.org/t/p/w185";
 
 const tmdb = axios.create({
   baseURL: BASE_URL,
@@ -12,7 +13,7 @@ const tmdb = axios.create({
   },
 });
 
-export const fetchTrendingMovies = async (page = 2) => {
+export const fetchTrendingMovies = async (page = 1) => {
   try {
     const response = await tmdb.get("/movie/popular", {
       params: { page },
@@ -20,6 +21,16 @@ export const fetchTrendingMovies = async (page = 2) => {
     return response.data.results;
   } catch (error) {
     console.error("Ошибка при получении трендовых фильмов:", error);
+    throw error;
+  }
+};
+
+export const fetchMovieCredits = async (movieId) => {
+  try {
+    const response = await tmdb.get(`/movie/${movieId}/credits`);
+    return response.data.cast; // массив актёров
+  } catch (error) {
+    console.error("Ошибка при получении актёров фильма:", error);
     throw error;
   }
 };
