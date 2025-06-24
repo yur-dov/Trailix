@@ -5,12 +5,71 @@
   justify-content: space-between;
 }
 
+.sliderWrapper {
+  overflow-x: auto;
+  position: relative;
+  z-index: 1;
+
+}
+
 .slider {
+  margin-left: 15px;
   display: flex;
-  /* overflow-x: auto; */
-  scroll-snap-type: x mandatory;
-  gap: 20px;
-  padding-bottom: 20px;
+  gap: 16px;
+  padding-bottom: 16px;
+}
+
+@media (min-width: 768px) {
+  .sliderWrapper {
+    overflow-x: visible;
+    padding: 0 40px;
+  }
+
+  .slider {
+    gap: 32px;
+    display: flex;
+  }
+
+  .card {
+    flex: 0 0 180px;
+    max-width: 180px;
+  }
+
+  .scrollBtn {
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    transition: background 0.2s;
+  }
+
+  .scrollBtnLeft {
+    left: 0;
+  }
+
+  .scrollBtnRight {
+    right: 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  .sliderWrapper {
+    padding: 0 80px;
+  }
+
+  .card {
+    flex: 0 0 220px;
+    max-width: 220px;
+  }
 }
 
 .card {
@@ -20,6 +79,7 @@
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+
 }
 
 .cardImg {
@@ -27,4 +87,17 @@
   width: 100%;
   height: auto;
   border-radius: 12px;
+}
+
+.cardName {
+  font-weight: 600;
+  font-size: 1rem;
+  margin: 8px 0 0 0;
+  text-align: center;
+}
+
+.cardCharacter {
+  font-size: 0.9rem;
+  color: #888;
+  text-align: center;
 }

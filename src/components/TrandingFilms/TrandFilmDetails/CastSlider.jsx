@@ -4,6 +4,7 @@ import { fetchMovieCredits } from "../../../services/ApiTMDB";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { BASE_IMG_URL_CAST } from "../../../services/ApiTMDB";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 function CastSlider() {
   const { id } = useParams();
@@ -22,6 +23,19 @@ function CastSlider() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, [id]);
 
+  const toLeft = () => {
+    scrollSlider(-300);
+  };
+
+  const toRight = () => {
+    scrollSlider(300);
+  };
+
+  function scrollSlider(offset) {
+    const slider = document.querySelector(`.${s.slider}`);
+    if (slider) slider.scrollBy({ left: offset, behavior: "smooth" });
+  }
+
   return (
     <Container>
       <div className={s.castWrapper}>
@@ -29,19 +43,44 @@ function CastSlider() {
         <p>view all</p>
       </div>
       <div className={s.sliderWrapper}>
-        <div className={s.slider}>
+        <button
+          className={`${s.scrollBtn} ${s.scrollBtnLeft}`}
+          type="button"
+          aria-label="Scroll left"
+          onClick={toLeft}
+        >
+          <FaArrowLeft />
+        </button>
+        <ul className={s.slider}>
           {cast.map((actor) => (
-            <div key={actor.id} className={s.card}>
-              <img
-                src={`${BASE_IMG_URL_CAST}${actor.profile_path}`}
-                alt={actor.name}
-                className={s.cardImg}
-              />
-              <p className={s.cardName}>{actor.name}</p>
-              <p className={s.cardCharacter}>{actor.character}</p>
-            </div>
+            <li key={actor.id} className={s.card}>
+              <figure>
+                <img
+                  src={
+                    actor.profile_path
+                      ? `${BASE_IMG_URL_CAST}${actor.profile_path}`
+                      : "https://via.placeholder.com/185x278?text=No+Image"
+                  }
+                  alt={actor.name}
+                  className={s.cardImg}
+                />
+                <figcaption className={s.cardName}>
+                  {actor.name}
+                  <br />
+                  <span className={s.cardCharacter}>{actor.character}</span>
+                </figcaption>
+              </figure>
+            </li>
           ))}
-        </div>
+        </ul>
+        <button
+          className={`${s.scrollBtn} ${s.scrollBtnRight}`}
+          type="button"
+          aria-label="Scroll right"
+          onClick={toRight}
+        >
+          <FaArrowRight />
+        </button>
       </div>
     </Container>
   );
