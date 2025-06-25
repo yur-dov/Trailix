@@ -26,7 +26,6 @@ function TrandingMovie() {
         setFilms(data.results || data);
         setGenres(genres);
         setTotalPages(data.total_pages || 500);
-        console.log(data);
       } catch (error) {
         console.error("Error fetching genres/trending movies:", error);
       }
@@ -41,8 +40,8 @@ function TrandingMovie() {
       <h2 className={s.TrandingMovieTitle}> Зараз у кіно</h2>
       <ul className={s.movieList}>
         {films.map((film) => (
-          <Link to={`${film.id}`} key={film.id}>
-            <li className={s.movieItem}>
+          <li className={s.movieItem} key={film.id}>
+            <Link to={`${film.id}`}>
               <div className={s.moviePoster}>
                 <img
                   src={`${BASE_IMG_URL}${film.poster_path}`}
@@ -60,8 +59,8 @@ function TrandingMovie() {
                   .filter(Boolean)
                   .join(", ")}
               </p>
-            </li>
-          </Link>
+            </Link>
+          </li>
         ))}
       </ul>
       <Pagination

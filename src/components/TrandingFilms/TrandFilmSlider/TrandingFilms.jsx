@@ -77,7 +77,6 @@ function TrandingFilms() {
     const getTrandFilms = async () => {
       try {
         const data = await fetchTrendingMovies();
-
         setFilms(data);
       } catch (error) {
         console.error("Error fetching trending movies:", error);
@@ -96,17 +95,21 @@ function TrandingFilms() {
       </div>
 
       <div className={s.sliderWrapper}>
-        <ul className={s.slider}>
+        <ul className={s.slider} ref={sliderRef}>
           {films.map((film) => (
-            <li key={film.id} className={s.card}>
-              <figure>
-                <img
-                  src={`${BASE_IMG_URL}${film.poster_path}`}
-                  alt={film.title}
-                  className={s.cardImg}
-                />
-                <figcaption className={s.cardCaption}>{film.title}</figcaption>
-              </figure>
+            <li className={s.card}>
+              <Link to={`/tranding/${film.id}`} key={film.id}>
+                <figure>
+                  <img
+                    src={`${BASE_IMG_URL}${film.poster_path}`}
+                    alt={film.title}
+                    className={s.cardImg}
+                  />
+                  <figcaption className={s.cardCaption}>
+                    {film.title}
+                  </figcaption>
+                </figure>
+              </Link>
             </li>
           ))}
         </ul>
