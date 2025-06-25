@@ -56,11 +56,7 @@ function CastSlider() {
             <li key={actor.id} className={s.card}>
               <figure>
                 <img
-                  src={
-                    actor.profile_path
-                      ? `${BASE_IMG_URL_CAST}${actor.profile_path}`
-                      : "https://via.placeholder.com/185x278?text=No+Image"
-                  }
+                  src={`${BASE_IMG_URL_CAST}${actor.profile_path}`}
                   alt={actor.name}
                   className={s.cardImg}
                 />

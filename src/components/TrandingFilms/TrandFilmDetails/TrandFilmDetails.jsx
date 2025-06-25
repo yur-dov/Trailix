@@ -24,7 +24,6 @@ function TrandFilmDetails() {
     const fetchData = async () => {
       try {
         const films = await getFilmById(id);
-        console.log(films);
         setFilm(films);
       } catch (error) {
         console.error("Error fetching film details:", error);

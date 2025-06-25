@@ -43,45 +43,6 @@
   height: 40px;
 }
 
-.searchForm {
-  margin-top: 20px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  position: relative;
-}
-
-.searchInput {
-  width: 320px;
-  height: 50px;
-  padding: 0 10px;
-  border-radius: 15px;
-  border: none;
-  background: rgba(35, 34, 41, 1);
-  font-size: 20px;
-  color: rgba(78, 76, 94, 1);
-}
-
-.searchBtn {
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 50px;
-  height: 50px;
-  border-radius: 0 15px 15px 0;
-  border: none;
-  background: rgba(35, 34, 41, 1);
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.searchBtnIcon {
-  color: white;
-  width: 30px;
-  height: 30px;
-}
 
 .modalMenuList {
   margin-top: 25px;

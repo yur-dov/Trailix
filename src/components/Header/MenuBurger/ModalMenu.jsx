@@ -7,7 +7,7 @@ import { gsap } from "gsap";
 import { Link } from "react-router-dom";
 import { FaRegUserCircle } from "react-icons/fa";
 import { IoClose } from "react-icons/io5";
-import { CiSearch } from "react-icons/ci";
+import SearchForm from "../../SearchForm/SearchForm";
 
 function ModalMenu({ onCloseModal, showModal }) {
   const modalRef = useRef(null);
@@ -42,12 +42,7 @@ function ModalMenu({ onCloseModal, showModal }) {
         </button>
       </div>
 
-      <form className={s.searchForm}>
-        <button className={s.searchBtn}>
-          <CiSearch className={s.searchBtnIcon} />
-        </button>
-        <input type="text" className={s.searchInput} placeholder="Search" />
-      </form>
+      <SearchForm />
 
       <ul className={s.modalMenuList}>
         <li className={s.modalMenuItem}>
