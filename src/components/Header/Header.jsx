@@ -7,6 +7,7 @@ import { FaRegUserCircle } from "react-icons/fa";
 
 import NavMenuMob from "./MenuNavMob/NavMenuMob";
 import ModalMenu from "./MenuBurger/ModalMenu";
+import SearchForm from "../SearchForm/SearchForm";
 
 import s from "./Header.module.css";
 
@@ -64,6 +65,9 @@ function Header() {
           </li>
         </ul>
       </nav>
+
+      {!isMobile && <SearchForm />}
+
       <div className={s.signInEWrapper}>
         <FaRegUserCircle className={s.iconSignIn} />
         <p className={s.signIn}>Sing In</p>

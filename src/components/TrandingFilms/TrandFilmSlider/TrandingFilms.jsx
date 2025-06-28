@@ -97,8 +97,8 @@ function TrandingFilms() {
       <div className={s.sliderWrapper}>
         <ul className={s.slider} ref={sliderRef}>
           {films.map((film) => (
-            <li className={s.card}>
-              <Link to={`/tranding/${film.id}`} key={film.id}>
+            <li className={s.card} key={film.id}>
+              <Link to={`/tranding/${film.id}`}>
                 <figure>
                   <img
                     src={`${BASE_IMG_URL}${film.poster_path}`}
