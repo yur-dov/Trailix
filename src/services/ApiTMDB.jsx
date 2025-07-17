@@ -18,9 +18,23 @@ export const fetchTrendingMovies = async (page = 1) => {
     const response = await tmdb.get("/movie/popular", {
       params: { page },
     });
+    console.log("Трендовые фильмы:", response.headers);
+
     return response.data.results;
   } catch (error) {
     console.error("Ошибка при получении трендовых фильмов:", error);
+    throw error;
+  }
+};
+
+export const fetchFilmByName = async (queryValue, page = 1) => {
+  try {
+    const response = await tmdb.get("/search/movie", {
+      params: { queryValue, page },
+    });
+    return response.data.results;
+  } catch (error) {
+    console.error("Ошибка при поиске фильмов:", error);
     throw error;
   }
 };

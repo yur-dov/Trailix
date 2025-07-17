@@ -33,3 +33,33 @@
   width: 340px;
   z-index: 1;
 }
+
+@media screen and (min-width: 1024px) {
+  .tvConWrapper {
+    display: flex;
+    flex-wrap: wrapx;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 50px;
+  }
+
+  .tvTitle {
+    font-size: 28px;
+    display: inline-block;
+    width: 400px;
+  }
+
+  .tvContainer {
+    margin: 0;
+    width: 400px;
+  }
+
+  .tvPoster {
+    width: 380px;
+  }
+
+  .tvImage {
+    width: 400px;
+  }
+
+}

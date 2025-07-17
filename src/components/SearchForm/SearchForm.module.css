@@ -25,7 +25,7 @@
   top: 0;
   width: 50px;
   height: 50px;
-  border-radius: 0 15px 15px 0;
+  border-radius: 15px;
   border: none;
   background: rgba(35, 34, 41, 1);
   cursor: pointer;
@@ -57,11 +57,37 @@
   .searchBtn {
     width: 30px;
     height: 30px;
-    border-radius: 0 5px 5px 0;
+    border-radius: 5px;
   }
 
   .searchBtnIcon {
     width: 20px;
     height: 20px;
   }
+}
+
+@media screen and (min-width: 1024px) {
+  .searchForm {
+    width: 320px;
+    height: 40px;
+    margin: 0 auto;
+  }
+
+  .searchInput {
+    height: 40px;
+    border-radius: 15px;
+    font-size: 16px;
+  }
+
+  .searchBtn {
+    width: 40px;
+    height: 40px;
+    border-radius: 15px;
+  }
+
+  .searchBtnIcon {
+    width: 24px;
+    height: 24px;
+  }
+
 }

@@ -31,11 +31,10 @@ function BannerTV() {
     fetchData();
   }, []);
 
-  // Когда изображения загружены — запускаем анимацию
   useEffect(() => {
-    if (!tvImage.length || !imgRef.current) return; // Добавлена проверка на существование DOM-элемента
+    if (!tvImage.length || !imgRef.current) return;
 
-    const tl = gsap.timeline({ repeat: -1, repeatDelay: 2 }); // Зацикленная анимация
+    const tl = gsap.timeline({ repeat: -1, repeatDelay: 2 });
 
     tl.to(imgRef.current, {
       opacity: 0,
@@ -59,24 +58,27 @@ function BannerTV() {
       tl.restart();
     }, 5000);
 
-    return () => clearInterval(interval); // Очистка интервала
+    return () => clearInterval(interval);
   }, [tvImage]);
 
   return (
     <Container>
-      <h3 className={s.tvTitle}>Насолоджуйся українським дубляжем</h3>
-      <div className={s.tvContainer}>
-        <img src={tv} alt="" className={s.tvImage} />
-        {tvImage.map((item) => (
-          <img
-            ref={imgRef}
-            key={item.id}
-            src={tvImage[0] ? `${BASE_IMG_URL}${tvImage[0].backdrop_path}` : ""}
-            alt={item.title}
-            className={s.tvPoster}
-          />
-        ))}
-        {/* <img src="" alt="" /> */}
+      <div className={s.tvConWrapper}>
+        <h3 className={s.tvTitle}>Насолоджуйся українським дубляжем</h3>
+        <div className={s.tvContainer}>
+          <img src={tv} alt="" className={s.tvImage} />
+          {tvImage.map((item) => (
+            <img
+              ref={imgRef}
+              key={item.id}
+              src={
+                tvImage[0] ? `${BASE_IMG_URL}${tvImage[0].backdrop_path}` : ""
+              }
+              alt={item.title}
+              className={s.tvPoster}
+            />
+          ))}
+        </div>
       </div>
     </Container>
   );
