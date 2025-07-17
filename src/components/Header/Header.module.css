@@ -88,17 +88,24 @@
   }
 }
 
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (min-width: 768px) and (max-width: 1024px) {
+
+
 
   .navList a {
     font-size: 14px;
   }
+
 }
 
 @media (min-width: 1024px) and (max-width: 1439px) {
 
   .navList a {
     font-size: 16px;
+  }
+
+  .navWrapper {
+    margin-left: 30px;
   }
 }
 
@@ -109,6 +116,10 @@
 
   .logo {
     font-size: 36px;
+  }
+
+  .navWrapper {
+    margin-left: 100px;
   }
 
   .navList {
