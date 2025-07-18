@@ -30,56 +30,58 @@ function Header() {
   }, [modalOpen]);
 
   return (
-    <header className={s.header}>
-      <Link to={"/"} className={s.logo}>
-        TRAIL<span>IX</span>
-      </Link>
+    <div className={s.headerWrapper}>
+      <header className={s.header}>
+        <Link to={"/"} className={s.logo}>
+          TRAIL<span>IX</span>
+        </Link>
 
-      {isMobile && (
-        <button className={s.menuBtn} onClick={toggleModal}>
-          <GiHamburgerMenu className={s.menuBtnIcon} />
-        </button>
-      )}
+        {isMobile && (
+          <button className={s.menuBtn} onClick={toggleModal}>
+            <GiHamburgerMenu className={s.menuBtnIcon} />
+          </button>
+        )}
 
-      <nav className={s.navWrapper}>
-        <ul className={s.navList}>
-          <li>
-            <Link to="/" className={pathname === "/" ? s.active : ""}>
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/library"
-              className={pathname === "/library" ? s.active : ""}
-            >
-              Библиотека
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/favorites"
-              className={pathname === "/favorites" ? s.active : ""}
-            >
-              Избранное
-            </Link>
-          </li>
-        </ul>
-      </nav>
+        <nav className={s.navWrapper}>
+          <ul className={s.navList}>
+            <li>
+              <Link to="/" className={pathname === "/" ? s.active : ""}>
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/library"
+                className={pathname === "/library" ? s.active : ""}
+              >
+                Библиотека
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/favorites"
+                className={pathname === "/favorites" ? s.active : ""}
+              >
+                Избранное
+              </Link>
+            </li>
+          </ul>
+        </nav>
 
-      {searchShow && <SearchForm />}
+        {searchShow && <SearchForm />}
 
-      <div className={s.signInEWrapper}>
-        <FaRegUserCircle className={s.iconSignIn} />
-        <p className={s.signIn}>Sing In</p>
-      </div>
+        <div className={s.signInEWrapper}>
+          <FaRegUserCircle className={s.iconSignIn} />
+          <p className={s.signIn}>Sing In</p>
+        </div>
 
-      {modalOpen && (
-        <ModalMenu showModal={modalOpen} onCloseModal={toggleModal} />
-      )}
+        {modalOpen && (
+          <ModalMenu showModal={modalOpen} onCloseModal={toggleModal} />
+        )}
 
-      <NavMenuMob />
-    </header>
+        <NavMenuMob />
+      </header>
+    </div>
   );
 }
 
