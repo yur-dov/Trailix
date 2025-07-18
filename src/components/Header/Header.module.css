@@ -44,13 +44,20 @@
 }
 
 .signInEWrapper {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 6px;
+  display: none;
 
-  @media screen and (max-width: 767px) {
-    display: none;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    color: white;
+
+    &:hover {
+      /* transform: scale(1.1); */
+      text-decoration: underline;
+    }
   }
 }
 
@@ -59,7 +66,7 @@
   height: 20px;
 }
 
-@media (min-width: 767px) {
+@media (min-width: 768px) {
   .header {
     padding: 16px 32px;
   }
@@ -89,9 +96,6 @@
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
-
-
-
   .navList a {
     font-size: 14px;
   }
@@ -99,6 +103,13 @@
 }
 
 @media (min-width: 1024px) and (max-width: 1439px) {
+  .header {
+    position: sticky;
+    top: 0;
+    right: 0;
+    background: rgba(25, 25, 25, 1);
+    z-index: 9999;
+  }
 
   .navList a {
     font-size: 16px;
@@ -112,7 +123,13 @@
 @media (min-width: 1440px) {
   .header {
     padding: 24px 48px;
+    position: sticky;
+    top: 0;
+    right: 0;
+    background: rgba(25, 25, 25, 1);
+    z-index: 9999;
   }
+
 
   .logo {
     font-size: 36px;

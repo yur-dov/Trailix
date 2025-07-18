@@ -18,7 +18,7 @@ export const fetchTrendingMovies = async (page = 1) => {
     const response = await tmdb.get("/movie/popular", {
       params: { page },
     });
-    console.log("Трендовые фильмы:", response.headers);
+    console.log("Трендовые фильмы:", response);
 
     return response.data.results;
   } catch (error) {
