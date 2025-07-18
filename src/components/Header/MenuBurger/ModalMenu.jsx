@@ -45,13 +45,13 @@ function ModalMenu({ onCloseModal, showModal }) {
       <SearchForm />
 
       <ul className={s.modalMenuList}>
-        <li className={s.modalMenuItem}>
+        <li className={s.modalMenuItem} onClick={onCloseModal}>
           <Link to="/">Home</Link>
         </li>
-        <li className={s.modalMenuItem}>
+        <li className={s.modalMenuItem} onClick={onCloseModal}>
           <Link to="/library">Library</Link>
         </li>
-        <li className={s.modalMenuItem}>
+        <li className={s.modalMenuItem} onClick={onCloseModal}>
           <Link to="/genres">Genres</Link>
         </li>
       </ul>
