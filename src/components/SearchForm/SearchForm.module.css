@@ -42,10 +42,9 @@
 
 @media screen and (min-width: 768px) {
   .searchForm {
-    width: 224px;
+    width: 204px;
     height: 30px;
     margin: 0;
-
   }
 
   .searchInput {
@@ -68,14 +67,14 @@
 
 @media screen and (min-width: 1024px) {
   .searchForm {
-    width: 320px;
+    width: 300px;
     height: 40px;
     margin: 0 auto;
   }
 
   .searchInput {
     height: 40px;
-    border-radius: 15px;
+    border-radius: 10px;
     font-size: 16px;
   }
 

@@ -7,7 +7,7 @@ function SharedLayout() {
     <>
       <Headers />
       <Outlet />
-      <Footer/>
+      <Footer />
     </>
   );
 }

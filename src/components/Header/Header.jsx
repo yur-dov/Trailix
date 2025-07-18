@@ -14,6 +14,7 @@ import s from "./Header.module.css";
 function Header() {
   const { pathname } = useLocation();
   const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
+  const searchShow = useMediaQuery({ query: "(min-width: 768px)" });
   const [modalOpen, setModalOpen] = useState(false);
 
   const toggleModal = () => {
@@ -66,7 +67,7 @@ function Header() {
         </ul>
       </nav>
 
-      {!isMobile && <SearchForm />}
+      {searchShow && <SearchForm />}
 
       <div className={s.signInEWrapper}>
         <FaRegUserCircle className={s.iconSignIn} />
