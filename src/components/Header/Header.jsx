@@ -4,6 +4,7 @@ import { useMediaQuery } from "react-responsive";
 
 import { GiHamburgerMenu } from "react-icons/gi";
 import { FaRegUserCircle } from "react-icons/fa";
+import { IoClose } from "react-icons/io5";
 
 import NavMenuMob from "./MenuNavMob/NavMenuMob";
 import ModalMenu from "./MenuBurger/ModalMenu";
@@ -38,7 +39,11 @@ function Header() {
 
         {isMobile && (
           <button className={s.menuBtn} onClick={toggleModal}>
-            <GiHamburgerMenu className={s.menuBtnIcon} />
+            {modalOpen ? (
+              <IoClose className={s.menuBtnIcon} />
+            ) : (
+              <GiHamburgerMenu className={s.menuBtnIcon} />
+            )}
           </button>
         )}
 

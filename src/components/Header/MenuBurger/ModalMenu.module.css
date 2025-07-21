@@ -6,41 +6,8 @@
   left: 0;
   background-color: rgba(0, 0, 0, 0.9);
   padding: 16px;
+  padding-top: 80px;
 }
-
-.modalMenuHeaderWrapp {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.logo {
-  color: rgb(240, 223, 197);
-  font-size: 36px;
-  font-weight: 600;
-  font-style: normal;
-  font-family: Ubuntu;
-}
-
-.logo span {
-  color: #00bfff;
-}
-
-.closeBtn {
-  width: 48px;
-  height: 48px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.closeBtnIcon {
-  color: white;
-  width: 40px;
-  height: 40px;
-}
-
 
 .modalMenuList {
   margin-top: 25px;
