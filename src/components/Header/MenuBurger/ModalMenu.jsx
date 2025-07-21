@@ -32,7 +32,7 @@ function ModalMenu({ onCloseModal, showModal }) {
 
   return createPortal(
     <div className={s.modalContainer} ref={modalRef}>
-      <div className={s.modalMenuHeaderWrapp}>
+      {/* <div className={s.modalMenuHeaderWrapp}>
         <p className={s.logo}>
           TRAIL<span>IX</span>
         </p>
@@ -40,7 +40,7 @@ function ModalMenu({ onCloseModal, showModal }) {
         <button type="button" onClick={onCloseModal} className={s.closeBtn}>
           <IoClose className={s.closeBtnIcon} />
         </button>
-      </div>
+      </div> */}
 
       <SearchForm />
 
