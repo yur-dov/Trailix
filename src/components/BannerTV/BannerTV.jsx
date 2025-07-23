@@ -15,7 +15,6 @@ function BannerTV() {
     const fetchData = async () => {
       try {
         const data = await fetchTrendingMovies();
-
         setTvImage(
           data.map((item) => {
             if (item.poster_path) {
