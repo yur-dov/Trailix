@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 
 import { BASE_IMG_URL } from "../../../services/ApiTMDB";
-import { getFilmById } from "../../../services/ApiTMDB";
+import { getFilmById, getCompanys } from "../../../services/ApiTMDB";
 import { useEffect, useState } from "react";
 import { CiClock2 } from "react-icons/ci";
 import {
@@ -19,6 +19,18 @@ function TrandFilmDetails() {
   const { id } = useParams();
   const [film, setFilm] = useState({});
   const [isBookmarked, setIsBookmarked] = useState(false);
+
+  useEffect(() => {
+    const fetchCompanyData = async () => {
+      try {
+        const companyData = await getCompanys(452);
+        console.log("Company HomePage:", companyData.homepage);
+      } catch (error) {
+        console.error("Error fetching company data:", error);
+      }
+    };
+    fetchCompanyData();
+  }, []);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -41,6 +53,7 @@ function TrandFilmDetails() {
     runtime,
     vote_average,
     overview,
+    // production_companies,
   } = film;
 
   return (

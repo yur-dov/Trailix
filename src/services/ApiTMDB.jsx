@@ -18,8 +18,6 @@ export const fetchTrendingMovies = async (page = 1) => {
     const response = await tmdb.get("/movie/popular", {
       params: { page },
     });
-    console.log("Трендовые фильмы:", response);
-
     return response.data.results;
   } catch (error) {
     console.error("Ошибка при получении трендовых фильмов:", error);
@@ -75,6 +73,16 @@ export const getGenres = async () => {
     return response.data.genres;
   } catch (error) {
     console.error("Ошибка при получении жанров:", error);
+    throw error;
+  }
+};
+
+export const getCompanys = async (id) => {
+  try {
+    const response = await tmdb.get(`/company/${id}`);
+    return response.data;
+  } catch (error) {
+    console.error("Ошибка при получении компаний:", error);
     throw error;
   }
 };

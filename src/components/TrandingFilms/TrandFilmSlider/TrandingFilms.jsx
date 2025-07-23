@@ -77,7 +77,6 @@ function TrandingFilms() {
     const getTrandFilms = async () => {
       try {
         const data = await fetchTrendingMovies();
-        console.log(data);
         setFilms(data);
       } catch (error) {
         console.error("Error fetching trending movies:", error);
