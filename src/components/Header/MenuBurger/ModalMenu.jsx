@@ -54,6 +54,9 @@ function ModalMenu({ onCloseModal, showModal }) {
         <li className={s.modalMenuItem} onClick={onCloseModal}>
           <Link to="/genres">Genres</Link>
         </li>
+        <li className={s.modalMenuItem} onClick={onCloseModal}>
+          <Link to="/favorites">Favorites</Link>
+        </li>
       </ul>
 
       <Link className={s.login}>

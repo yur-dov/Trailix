@@ -9,7 +9,7 @@ import Genres from "./pages/Genres/Genres";
 import TrandFilmDetails from "./components/TrandingFilms/TrandFilmDetails/TrandFilmDetails";
 import Series from "./pages/Series/Series";
 import ScrollToTop from "./components/Utils/ScrollToTop";
-// import Favorites from "./components/Favorites/Favorites";
+import Favorites from "./components/Favorites/Favorites";
 
 function App() {
   return (
@@ -37,7 +37,7 @@ function App() {
           <Route path="tranding/:id" element={<TrandFilmDetails />} />
           <Route path="genres" element={<Genres />} />
           <Route path="series" element={<Series />} />
-          {/* <Route path="trands" element={<Favorites />} /> */}
+          <Route path="favorites" element={<Favorites />} />
         </Route>
       </Routes>
     </>
