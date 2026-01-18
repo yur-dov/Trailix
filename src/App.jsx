@@ -11,6 +11,8 @@ import Series from "./pages/Series/Series";
 import ScrollToTop from "./components/Utils/ScrollToTop";
 import Favorites from "./components/Favorites/Favorites";
 
+// сдесь нгачинается код компонента App
+
 function App() {
   return (
     <>
