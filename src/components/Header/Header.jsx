@@ -11,7 +11,7 @@ import ModalMenu from "./MenuBurger/ModalMenu";
 import SearchForm from "../SearchForm/SearchForm";
 
 import s from "./Header.module.css";
-
+// сдесь нгачинается код компонента Header
 function Header() {
   const { pathname } = useLocation();
   const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
